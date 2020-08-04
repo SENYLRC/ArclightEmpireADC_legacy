@@ -18,3 +18,544 @@
  *= require  'blacklight_range_limit'
  *
 */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*this is for arclight nav in catalog **/
+.nav.nav-pills {
+  margin-bottom: 1rem !important;
+}
+
+.nav.nav-tabs {
+  margin-bottom: 0;
+  flex-wrap: nowrap;
+}
+
+.nav.nav-tabs .nav-item .nav-link:not(.active) {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.nav.nav-tabs .nav-item .nav-link {
+  height: 100%;
+}
+.nav.nav-tabs .nav-item {
+  overflow-wrap: break-word;
+}
+.tab-pane {
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-color: #dee2e6;
+  border-radius: 0px 0px 0.25rem 0.25rem;
+  padding: 2rem;
+}
+
+/*****end of arclight internal nav */
+
+.blacklight-icons svg {
+height: 1rem;
+width: 1rem;
+top: .125rem;
+position: relative;
+}
+
+.menu a {
+color:#fff;
+}
+@media (min-width: 1200px)
+.container {
+    max-width: 1140px;
+}
+
+#esln_block {
+display: inline-block;
+margin-left: 15%;
+}
+
+#esln_map {
+float: left;
+width: 63%;
+
+}
+#esln_list {
+float: right;
+}
+
+.content {
+padding-top: 10px;
+}
+
+.content.node-page {
+padding-top: 90px;
+}
+
+
+.esln_indent ul {
+ padding-left: 60px;
+}
+input#searchBox.form-control { 
+  width: 55%;
+  height: 50px;
+}
+
+select#facet.form-control{
+   height: 50px;
+}
+
+#page-wrap{
+  max-width: 1024px;
+  margin: 50px auto 20px auto ;
+}
+
+#header_wrapper{
+  background: #fff;
+}
+
+#header {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+
+.top_left{
+  float: left;
+  margin: 11px 0;
+  background: #fff;
+}
+
+.EAD_Home_Search_Box {
+  margin-top: -13%;
+  padding-bottom:0%;
+        font-size: 20pt;
+  color: #fff;
+}
+
+
+.top_right {
+    float: right;
+    background: #fff;
+    height: 100%;
+    margin-top: 33px;
+}
+.menu_wrapper{
+  width: 100%;
+}
+#site-description {
+    margin-right: 12%;
+    float: right;
+    clear: both;
+    color: #000;
+    background: #fff;
+}
+#site-title a, #site-description {
+    font-weight: normal;
+}
+#main-menu {
+  position: relative;
+  float: right;
+/*  margin-right: 11%; senylrc disable 6-2-2020 */
+}
+
+#main-menu ul {
+  float:left;
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+#main-menu li {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  float: left;
+}
+
+#main-menu a {
+  padding: 28px 38px;
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 100%;
+  background: #58595b;
+}
+
+#main-menu li a.active{
+  color: white;
+
+}
+
+#main-menu li:hover >a{
+  color: white;
+  background: #989898  ;
+}
+
+#main-menu ul li:first-child {
+  padding-left:0;
+}
+
+ul.menu{
+  padding: 0;
+  margin: 5px 0 5px 0;
+}
+
+.senylrc_top_container {
+
+    width: 100%;
+	 display: inline-flex;
+  padding-bottom: 10px;
+}
+
+
+.bg-dark {
+display:none;
+}
+
+
+ul.facet-values.list-unstyled{
+margin-left:-10px;
+}
+@media screen and (max-width: 960px) {
+
+  #content,
+  #sidebar-first,
+  #sidebar-second,
+  .content-sidebar-wrap {
+    float: none;
+    clear: both;
+    width: 100% !important;
+  }
+
+/*hide full screen menu for small screens */
+#main-menu{
+display:none;
+}
+/*show mobile menu in small screen*/
+.navbar-responsive.navbar-toggleable-md.navbar-light.bg-faded\>.\<button.class\={
+display:unset;
+}
+
+.btn-outline-secondary{
+color:#6c757d !important; 
+border-color:#6c757d !important;  
+}
+.btn-primary{
+color:#fff;
+background-color:##007bff;
+border-color:##007bff;
+}
+  #page-wrap {
+    margin: 10px auto;
+  }
+
+  #top-area .column {
+    width: 32%;
+  }
+
+  #sidebar-first,
+  #sidebar-second,
+  #head,
+  #foot {
+    padding: 0 10px;
+  }
+
+  .content-sidebar-wrap #content {
+    margin: 0;
+  }
+
+  #footer_wrapper, #top-area {
+    padding: 0 15px;
+  }
+
+  #post-content {
+    margin: 10px;
+  }
+
+  #breadcrumbs {
+    margin: 0 10px;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  body {
+    margin-top: 0;
+    font-size: 13px;
+  }
+
+  #logo {
+    margin: 8px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #logo img {
+    text-align: center;
+    display: inline-block;
+  }
+
+img {
+  outline: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+  #site-title {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+  }
+
+  #site-description {
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #site-title a {
+    width: 100%;
+    text-align: center;
+  }
+
+  #copyright {
+    padding: 0 12px;
+  }
+
+  .top_left, .top_right, 
+  .search_block, .region-user-menu {
+    width: 100%;
+  }
+
+  #footer p {
+    margin: 0;
+  }
+
+  #copyright p {
+    margin: 5px 0;
+    clear: both;
+    padding-top: 0;
+  }
+
+  #foot, #copyright {
+    padding: 10px 0;
+  }
+
+  .front .content-sidebar-wrap {
+    margin: 0;
+  }
+
+  .theme-default .nivo-controlNav {
+    padding-top: 10px;
+  }
+
+  .footer_credit p {
+    width: 100%;
+    padding: 5% 0;
+  }
+
+
+  #main-menu ul {
+    display: none;
+  }
+
+  #main-menu li ul {
+    position: static;
+    border: 0;
+  }
+
+  #main-menu li ul ul {
+    margin: 0 !important;
+    border: 0;
+  }
+
+  #main-menu ul,
+  #main-menu li {
+    float: none;
+    width: 100%;
+  }
+
+  #main-menu {
+    border: 0;
+    float: none;
+  }
+
+  #main-menu a {
+    width: 100%;
+    padding: 15px 0;
+    color: #E9E9E9;
+    border-radius: 0;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #B6B6B6;
+  }
+
+  #main-menu li li a {
+    text-align: center;
+    font-size: 14px;
+    background: #44505C;
+    border-top: 1px solid #B6B6B6;
+  }
+
+  #main-menu li:hover > ul,
+  #main-menu li li:hover > ul,
+  #main-menu li li li:hover > ul {
+    display: none;
+  }
+
+  .drop-down-toggle {
+    display: block;
+  }
+
+  .menu_wrapper {
+    margin: 0;
+  }
+
+  #main-menu .nav-toggle {
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    background: #18222B;
+    color: white;
+    margin: 0;
+    padding: 15px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    background: url(../images/mobile-menu.png) right #18222B no-repeat;
+  }
+
+  #main-menu ul.menu li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .content-sidebar-wrap,
+  #sidebar-first,
+  #sidebar-second {
+    float: none;
+    width: auto;
+    clear: both;
+  }
+
+  .content-sidebar-wrap #content {
+    float: left;
+    width: auto;
+  }
+
+  #sidebar-first .block,
+  #sidebar-second .block,
+  #footer-area .column,
+  #top-area .column {
+    float: none !important;
+    width: auto !important;
+    margin-left: 0;
+  }
+
+  #footer-area .column,
+  #top-area .column {
+    margin: 10px;
+  }
+
+  #top-area .column:first-child,
+  #footer-area .column:first-child {
+    margin: 10px;
+  }
+
+  .copyright, .credits {
+    float: none;
+    text-align: left;
+    text-align: center;
+  }
+
+  #footer_wrapper, #top-area {
+    padding: 0;
+  }
+
+  .theme-default .nivo-caption {
+    display: none !important;
+  }
+
+  .node {
+    margin: 10px 0;
+  }
+
+  .region-front-welcome .block h2 {
+    padding: 5px 0;
+  }
+
+  .node h2.title {
+    font-size: 24px;
+  }
+
+  .submitted {
+    font-size: 12px;
+  }
+
+  .comment-submitted, .links {
+    font-size: 13px;
+  }
+
+  .top-msg-wrap h1 {
+    padding: 10px;
+    font-size: 15px;
+    line-height: 160%;
+  }
+
+  .comment div.user-picture img {
+    width: 70px;
+    bottom: -20px;
+  }
+
+  .social-icons {
+    position: inherit;
+    width: 100%;
+  }
+
+  .social-icons ul {
+    text-align: center;
+  }
+
+
+}
+
+@media screen and (max-width: 440px) {
+
+  input.form-text, select.form-select {
+    width: 93%;
+  }
+
+  textarea.form-textarea {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+#site-description{
+display:none;
+}
+.content{
+padding-top:35px;
+}
+}
+
+
+
