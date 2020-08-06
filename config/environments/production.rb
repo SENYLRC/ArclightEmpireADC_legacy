@@ -4,6 +4,13 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+config.hosts << /[a-z0-9]+\.senylrc\.org/
+config.assets.prefix = '/search'
+
+
+config.relative_url_root = '/search'
+config.serve_static_assets = true
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -58,7 +65,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "arclight_production"
+  # config.active_job.queue_name_prefix = "ArclightEmpireADC_production"
 
   config.action_mailer.perform_caching = false
 
