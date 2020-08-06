@@ -7,8 +7,10 @@ Rails.application.configure do
   config.cache_classes = false
 
 config.hosts << /[a-z0-9]+\.senylrc\.org/
-config.assets.prefix = '/search'
-  config.relative_url_root = '/search'
+config.assets.prefix = '/search2'
+
+config.relative_url_root = '/'
+
   # Do not eager load code on boot.
   config.eager_load = false
 
