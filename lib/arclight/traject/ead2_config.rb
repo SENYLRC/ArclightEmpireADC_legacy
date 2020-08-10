@@ -176,7 +176,7 @@ to_field 'acqinfo_ssim', extract_xpath('/ead/archdesc/descgrp/acqinfo/*[local-na
 
 to_field 'access_subjects_ssim', extract_xpath('/ead/archdesc/controlaccess', to_text: false) do |_record, accumulator|
   accumulator.map! do |element|
-    %w[subject function occupation genreform].map do |selector|
+    %w[subject function occupation].map do |selector|
       element.xpath(".//#{selector}").map(&:text)
     end
   end.flatten!
@@ -443,7 +443,7 @@ compose 'components', ->(record, accumulator, _context) { accumulator.concat rec
 
   to_field 'access_subjects_ssim', extract_xpath('./controlaccess', to_text: false) do |_record, accumulator|
     accumulator.map! do |element|
-      %w[subject function occupation genreform].map do |selector|
+      %w[subject function occupation].map do |selector|
         element.xpath(".//#{selector}").map(&:text)
       end
     end.flatten!
