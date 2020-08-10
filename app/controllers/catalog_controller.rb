@@ -88,7 +88,7 @@ class CatalogController < ApplicationController
     # :index_range can be an array or range of prefixes that will be used to create the navigation (note: It is case sensitive when searching values)
 
     config.add_facet_field 'repository_sim', label: 'Repository', limit: 10
-    config.add_facet_field 'collection_sim', label: 'Collection', limit: 10
+    config.add_facet_field 'collection_sim', label: 'Finding Aids', limit: 10
     config.add_facet_field 'creator_ssim', label: 'Creator', limit: 10
     config.add_facet_field 'creators_ssim', label: 'Creator', show: false
     config.add_facet_field 'date_range_sim', label: 'Date range', range: true
@@ -113,7 +113,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'scopecontent_ssm', label: 'Scope Content', helper_method: :render_html_tags
     config.add_index_field 'extent_ssm', label: 'Physical Description'
     config.add_index_field 'accessrestrict_ssm', label: 'Conditions Governing Access', helper_method: :render_html_tags
-    config.add_index_field 'collection_ssm', label: 'Collection Title'
+    config.add_index_field 'collection_ssm', label: 'Finding Aid Title'
     config.add_index_field 'geogname_ssm', label: 'Place'
 
     config.add_facet_field 'has_online_content_ssim', label: 'Access', query: {

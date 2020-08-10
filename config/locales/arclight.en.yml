@@ -13,7 +13,7 @@ en:
     request:
       container: Request
     routes:
-      collections: Collections
+      collections: Finding Aids
       home: Home
       repositories: Repositories
       search_results: Search results
@@ -30,7 +30,7 @@ en:
       index:
         all_group_results: view all %{count}
         all_results: All results
-        group_by_collection: Grouped by collection
+        group_by_collection: Grouped by finding aid
         group_results: Group results
         group_results_count:
           one: 1 result
@@ -54,7 +54,7 @@ en:
       show:
         access: Access
         collapse: Collapse
-        collection_id: 'Collection ID: %{id}'
+        collection_id: 'EAD ID: %{id}'
         context: Collection context
         context_nav:
           title: Collection context navigation
@@ -71,7 +71,7 @@ en:
         no_contents: No content inventory
         online_content: Online content
         online_content_upper: ONLINE CONTENT
-        our_collections: Our Collections
+        our_collections: Our Finding Aids
         overview: Overview
         sections:
           access_field: Access and Use
@@ -85,9 +85,9 @@ en:
           summary_field: Summary
         tablist_nav: Context
     within_collection_dropdown:
-      all_collections: all collections
+      all_collections: all finding aids
       label_html: Search<span class="sr-only"> within</span>
-      this_collection: this collection
+      this_collection: this finding aid
   blacklight:
     entry_name:
       grouped:
