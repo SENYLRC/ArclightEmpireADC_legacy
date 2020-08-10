@@ -8,7 +8,7 @@ en:
       scope_and_contents: Scope and Contents
       scope_note: 'Scope note: '
       view_all: View
-    masthead_heading: Archival Collections at Institution
+    masthead_heading: Search Finding Aids 
     repositories: Repositories
     request:
       container: Request
@@ -49,7 +49,7 @@ en:
           zero: No collections
         show: "%{name} - Arclight"
         title: Repositories - Arclight
-        view_all_collections: View all of our collections
+        view_all_collections: View all of our Finding Aids
         view_more: View more
       show:
         access: Access
