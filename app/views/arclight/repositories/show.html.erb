@@ -1,5 +1,10 @@
-
-
+#This will remove the site side search box from the repo landing page
+<style>
+.navbar-search.navbar.navbar-light.bg-light{
+display:none !important;
+}
+</style>
+#This will create a search box for a repo landing page
 
   <form class="search-query-form pr-0" role="search" action="http://arclight.senylrc.org/search/catalog" accept-charset="UTF-8" method="get">
   <input type="hidden" id="f[repository_sim][]" name="f[repository_sim][]" value="<%= @repository.name %>">   
