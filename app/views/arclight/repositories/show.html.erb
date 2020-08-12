@@ -50,7 +50,11 @@ display:none !important;
   </div>
   <div class="col text-right">
     <span class="al-repository-collections">
-      <%= link_to(t(:'arclight.views.repositories.view_all_collections'), repository_collections_path(@repository)) %>
+<style>.viewall-text a{color:#fff;}</style>
+<span class="viewall-text d-none d-lg-inline">
+<button class="btn btn-primary search-btn" id="search">
+<%= link_to(t(:'arclight.views.repositories.view_all_collections'), repository_collections_path(@repository)) %>
+    </button></span>
     </span>
   </div>
 </div>
