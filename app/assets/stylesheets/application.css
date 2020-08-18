@@ -24,6 +24,10 @@
 display:none;
 }
 
+.checkbox.toggle-bookmark {
+display:none; 
+}
+
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
