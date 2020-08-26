@@ -315,7 +315,7 @@ module ArclightHelper
     end
 
     def within_repository_context?
-        return true if repository_faceted_on || on_repositories_show? 
+        return true if repository_faceted_on || on_repositories_show? || record_view?
     end
   
     def repository_context_value

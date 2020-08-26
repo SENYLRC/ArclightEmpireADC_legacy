@@ -22,7 +22,8 @@
       <%= 'disabled' unless within_repository_context? %>
     >
 
-      <%= t('arclight.within_collection_dropdown.this_repository') %>
+      <%= repository_context_value %>
+      <%= t('arclight.within_collection_dropdown.this_repository') unless within_repository_context? %>
     </option>
     <option
       value="<%= Array(params.dig(:f, :collection_sim)).first || @document && @document.collection_name %>"
@@ -30,7 +31,8 @@
       <%= 'disabled' unless within_collection_context? %>
     >
 
-      <%= t('arclight.within_collection_dropdown.this_collection') %>
+      <%= Array(params.dig(:f, :collection_sim)).first || @document && @document.collection_name %>
+      <%= t('arclight.within_collection_dropdown.this_collection') unless within_collection_context? %>
     </option>
   </select>
 </div>
