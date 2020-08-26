@@ -178,6 +178,10 @@ module ArclightHelper
       params[:hierarchy_context] == 'component'
     end
   
+    def online_contents_context?
+      params[:view] == 'online_contents'
+    end
+  
     # determine which icon to show in search results header
     # these icon names will need to be updated when the icons are determined
     def document_or_parent_icon(document)
@@ -266,37 +270,35 @@ module ArclightHelper
       send(:"render_document_#{config_field}_label", document, field: field)
     end
   
-    ##
-    # Reduces a document's parent_ids to a set of nested ul/li that resembels
-    # the collection / component / subcomponent structure
-    def nested_component_lists(document)
-      document.parent_ids.reverse.reduce(''.html_safe) do |acc, parent_id|
-        content_tag(
-          :ul,
-          class: %w[parent collection-context],
-          data: { 'data-collapse': I18n.t('arclight.views.show.collapse'), 'data-expand': I18n.t('arclight.views.show.expand') }
-        ) do
-          content_tag(:li, id: parent_id) do
-            safe_join(
-              [context_navigator_content(document, parent_id), acc]
-            )
-          end
-        end
-      end
+    def show_expanded?(document)
+      !original_document?(document) && within_original_tree?(document)
     end
   
-    def context_navigator_content(document, parent_id)
+    def within_original_tree?(document)
+      Array.wrap(params['original_parents']).map do |parent|
+        Arclight::Parent.new(id: parent, eadid: document.parent_ids.first, level: nil, label: nil).global_id
+      end.include?(document.id)
+    end
+  
+    def original_document?(document)
+      document.id == params['original_document']
+    end
+  
+    def generic_context_navigation(document, original_parents: document.parent_ids, component_level: 1)
       content_tag(
-        :div, '',
-        class: "context-navigator al-hierarchy-level-#{document.component_level} documents-hierarchy",
+        :div,
+        '',
+        class: 'context-navigator',
         data: {
+          collapse: I18n.t('arclight.views.show.collapse'),
+          expand: I18n.t('arclight.views.show.expand'),
           arclight: {
-            level: document.parent_ids.index(parent_id) + 1,
+            level: component_level,
             path: search_catalog_path(hierarchy_context: 'component'),
             name: document.collection_name,
-            parent: parent_id,
             originalDocument: document.id,
-            originalParents: document.parent_ids
+            originalParents: original_parents,
+            eadid: normalize_id(document.eadid)
           }
         }
       )
@@ -313,17 +315,17 @@ module ArclightHelper
     end
 
     def within_repository_context?
-      return true if repository_faceted_on || on_repositories_show? 
+        return true if repository_faceted_on || on_repositories_show? 
     end
-
+  
     def repository_context_value
         if on_repositories_show?
-          @repository.name
+            @repository.name
         else
-          Array(params.dig(:f, :repository_sim)).first || @document && @document.repository
+            Array(params.dig(:f, :repository_sim)).first || @document && @document.repository
         end
     end
-
+  
     def results_view?
       controller_name == 'catalog' && action_name == 'index'
     end
