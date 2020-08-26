@@ -87,6 +87,7 @@ en:
     within_collection_dropdown:
       all_collections: all finding aids
       label_html: Search<span class="sr-only"> within</span>
+      this_repository: this repository
       this_collection: this finding aid
   blacklight:
     entry_name:
