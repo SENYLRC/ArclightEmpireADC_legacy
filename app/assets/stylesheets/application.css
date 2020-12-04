@@ -24,6 +24,20 @@
 display:none;
 }
 
+/*Southeasern put this one to fix a display issue*/
+.al-metadata-section.breadcrumb-item-4{
+display:inherit;
+}
+/*Southeasern put this one to fix a display issue*/
+.al-metadata-section.breadcrumb-item-5{
+display:inherit;
+}
+/*this was for show more which was not working right */
+
+.responsiveTruncatorToggle{
+display:none;
+}
+
 .checkbox.toggle-bookmark {
 display:none; 
 }
@@ -542,8 +556,12 @@ img {
     text-align: center;
   }
 
-
 }
+
+
+
+
+
 
 @media screen and (max-width: 440px) {
 
