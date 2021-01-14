@@ -88,7 +88,7 @@ class CatalogController < ApplicationController
     # :index_range can be an array or range of prefixes that will be used to create the navigation (note: It is case sensitive when searching values)
 
     config.add_facet_field 'repository_sim', label: 'Repository', limit: 10
-    config.add_facet_field 'collection_sim', label: 'Finding Aids', limit: 10
+    config.add_facet_field 'collection_sim', label: 'Collections', limit: 10
     config.add_facet_field 'creator_ssim', label: 'Creator', limit: 10
     config.add_facet_field 'creators_ssim', label: 'Creator', show: false
     config.add_facet_field 'date_range_sim', label: 'Date range', range: true
@@ -113,7 +113,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'scopecontent_ssm', label: 'Scope Content', helper_method: :render_html_tags
     config.add_index_field 'extent_ssm', label: 'Physical Description'
     config.add_index_field 'accessrestrict_ssm', label: 'Conditions Governing Access', helper_method: :render_html_tags
-    config.add_index_field 'collection_ssm', label: 'Finding Aid Title'
+    config.add_index_field 'collection_ssm', label: 'Collection Title'
     config.add_index_field 'geogname_ssm', label: 'Place'
 
     config.add_facet_field 'has_online_content_ssim', label: 'Access', query: {
@@ -276,7 +276,7 @@ class CatalogController < ApplicationController
     # Collection Show Page - Related Section
     config.add_related_field 'relatedmaterial_ssm', label: 'Related material', helper_method: :render_html_tags
     config.add_related_field 'separatedmaterial_ssm', label: 'Separated material', helper_method: :render_html_tags
-    config.add_related_field 'otherfindaid_ssm', label: 'Other finding aids', helper_method: :render_html_tags
+    config.add_related_field 'otherfindaid_ssm', label: 'Other collections', helper_method: :render_html_tags
     config.add_related_field 'altformavail_ssm', label: 'Alternative form available', helper_method: :render_html_tags
     config.add_related_field 'originalsloc_ssm', label: 'Location of originals', helper_method: :render_html_tags
 
@@ -372,7 +372,7 @@ class CatalogController < ApplicationController
     config.add_component_terms_field 'parent_access_terms_ssm', label: 'Parent Terms of Access', helper_method: :render_html_tags
 
     # Collection and Component Show Page Access Tab - In Person Section
-    config.add_in_person_field 'repository_ssm', if: :repository_config_present, label: 'Location of this finding aid', helper_method: :context_access_tab_repository
+    config.add_in_person_field 'repository_ssm', if: :repository_config_present, label: 'Location of this collection', helper_method: :context_access_tab_repository
     config.add_in_person_field 'id', if: :before_you_visit_note_present, label: 'Before you visit', helper_method: :context_access_tab_visit_note # Using ID because we know it will always exist
 
     # Collection and Component Show Page Access Tab - How to Cite Section

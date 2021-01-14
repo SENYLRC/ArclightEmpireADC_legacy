@@ -18,7 +18,12 @@
  *= require  'blacklight_range_limit'
  *
 */
+/* for ada */
+.d-lg-inline {
+color:#fff;
+}
 
+/*end ada mods */
 /*this is to remove Archinve collection at inst text */
 .al-masthead h1, .al-masthead .h1{
 display:none;

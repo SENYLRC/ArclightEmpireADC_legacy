@@ -8,12 +8,12 @@ en:
       scope_and_contents: Scope and Contents
       scope_note: 'Scope note: '
       view_all: View
-    masthead_heading: Search Finding Aids 
+    masthead_heading: Search Collections 
     repositories: Repositories
     request:
       container: Request
     routes:
-      collections: Finding Aids
+      collections: Collections
       home: Home
       repositories: Repositories
       search_results: Search results
@@ -30,7 +30,7 @@ en:
       index:
         all_group_results: view all %{count}
         all_results: All results
-        group_by_collection: Grouped by finding aid
+        group_by_collection: Grouped by collection
         group_results: Group results
         group_results_count:
           one: 1 result
@@ -49,7 +49,7 @@ en:
           zero: No collections
         show: "%{name} - Arclight"
         title: Repositories - Arclight
-        view_all_collections: View all of our Finding Aids
+        view_all_collections: View all of our Collections
         view_more: View more
       show:
         access: Access
@@ -71,7 +71,7 @@ en:
         no_contents: No content inventory
         online_content: Online content
         online_content_upper: ONLINE CONTENT
-        our_collections: Recently added Finding Aids
+        our_collections: Recently added Collections
         overview: Overview
         sections:
           access_field: Access and Use
@@ -85,10 +85,10 @@ en:
           summary_field: Summary
         tablist_nav: Context
     within_collection_dropdown:
-      all_collections: all finding aids
+      all_collections: all collections
       label_html: Search<span class="sr-only"> within</span>
       this_repository: this repository
-      this_collection: this finding aid
+      this_collection: this collection
   blacklight:
     entry_name:
       grouped:
