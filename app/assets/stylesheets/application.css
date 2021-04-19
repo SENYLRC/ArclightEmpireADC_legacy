@@ -22,7 +22,25 @@
 .d-lg-inline {
 color:#fff;
 }
-
+.btn-primary{
+background-color: #0054AD;
+}
+a{
+color: #0054AD;
+}
+body{
+color:#000;
+}
+.al-repository{
+background-color:#fff;
+border:unset;
+}
+.bg-light{
+background-color:#fff !important;
+}
+.input-group-text{
+color:#000;
+}
 /*end ada mods */
 /*this is to remove Archinve collection at inst text */
 .al-masthead h1, .al-masthead .h1{
