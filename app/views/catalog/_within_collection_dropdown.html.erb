@@ -7,8 +7,8 @@
   <select
     id="within_collection"
     class="custom-select search-field rounded-right"
+<%= 'name="f[collection_sim][]"'.html_safe if within_collection_context? %>
     <%= 'name="f[repository_sim][]"'.html_safe if within_repository_context? %>
-    <%= 'name="f[collection_sim][]"'.html_safe if within_collection_context? %>
   >
     <option
       <%= "selected" unless within_repository_context? || within_collection_context? %>
@@ -16,15 +16,21 @@
     >
       <%= t('arclight.within_collection_dropdown.all_collections') %>
     </option>
+
+
     <option
-      value="<%= repository_context_value %>"
+   value="<%= repository_context_value %>"
       <%= 'selected' if within_repository_context? %>
       <%= 'disabled' unless within_repository_context? %>
     >
 
-      <%= repository_context_value %>
+   <%= repository_context_value %>
+      <%= Array(params.dig(:f, :repository_sim)).first || @document && @document.repository %>
       <%= t('arclight.within_collection_dropdown.this_repository') unless within_repository_context? %>
+
     </option>
+
+
     <option
       value="<%= Array(params.dig(:f, :collection_sim)).first || @document && @document.collection_name %>"
       <%= 'selected' if within_collection_context? %>
