@@ -278,7 +278,7 @@ class CatalogController < ApplicationController
     # Collection Show Page - Related Section
     config.add_related_field 'relatedmaterial_ssm', label: 'Related material', helper_method: :render_html_tags
     config.add_related_field 'separatedmaterial_ssm', label: 'Separated material', helper_method: :render_html_tags
-    config.add_related_field 'otherfindaid_ssm', label: 'Other collections', helper_method: :render_html_tags
+    config.add_related_field 'otherfindaid_ssm', label: 'Other finding aids', helper_method: :render_html_tags
     config.add_related_field 'altformavail_ssm', label: 'Alternative form available', helper_method: :render_html_tags
     config.add_related_field 'originalsloc_ssm', label: 'Location of originals', helper_method: :render_html_tags
 
