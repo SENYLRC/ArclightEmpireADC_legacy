@@ -22,4 +22,4 @@ default:
 #  pdf:
  #   template: 'http://example.com/%{unitid}.pdf'
   ead:
-    template: 'http://arclight.senylrc.org/ead/%{repository_id}/%{eadid}.xml'
+    template: 'https://www.empireadc.org/ead/%{repository_id}/%{eadid}.xml'

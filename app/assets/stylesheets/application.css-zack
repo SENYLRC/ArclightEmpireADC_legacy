@@ -18,53 +18,9 @@
  *= require  'blacklight_range_limit'
  *
 */
-/* for ada */
-address{
-font-style:italic;
-
-}
-.d-lg-inline {
-color:#fff;
-}
-.btn-primary{
-background-color: #0054AD;
-}
-a{
-color: #0054AD;
-}
-body{
-color:#000;
-font-family:system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-}
-.al-repository{
-background-color:#fff;
-border:unset;
-}
-.bg-light{
-background-color:#fff !important;
-}
-.input-group-text{
-color:#000;
-}
-/*end ada mods */
-
 
 /*this is to remove Archinve collection at inst text */
 .al-masthead h1, .al-masthead .h1{
-display:none;
-}
-
-/*Southeasern put this one to fix a display issue*/
-.al-metadata-section.breadcrumb-item-4{
-display:inherit;
-}
-/*Southeasern put this one to fix a display issue*/
-.al-metadata-section.breadcrumb-item-5{
-display:inherit;
-}
-/*this was for show more which was not working right */
-
-.responsiveTruncatorToggle{
 display:none;
 }
 
@@ -140,6 +96,7 @@ margin-left: 15%;
 
 #esln_map {
 float: left;
+width: 63%;
 
 }
 #esln_list {
@@ -198,7 +155,7 @@ select#facet.form-control{
 
 .top_right {
     float: right;
-    background: transparent;
+    background: #fff;
     height: 100%;
     margin-top: 33px;
 }
@@ -206,8 +163,8 @@ select#facet.form-control{
   width: 100%;
 }
 #site-description {
-    margin-left: 18%;
-    float: left;
+    margin-right: 12%;
+    float: right;
     clear: both;
     color: #000;
     background: #fff;
@@ -587,22 +544,9 @@ img {
 
 }
 
-@media (min-width: 992px) {
- .al-repository .al-repository-information .al-repository-description {
-border-left:unset;
-}
-}
 
 
-@media (min-width: 320px) {
-.d-none{
-display:inline !important;
-}
 
- .al-repository .al-repository-information .al-repository-description {
-border-left:unset;
-}
-}
 
 
 @media screen and (max-width: 440px) {
@@ -616,7 +560,6 @@ border-left:unset;
   }
 
 }
-
 
 @media screen and (max-width: 640px) {
 #site-description{

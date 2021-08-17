@@ -30,7 +30,7 @@
     <div class="senylrc_top_container">
     <div class="top_left">
               <div id="logo">
-          <a href="/" title="Home"><img alt="EmpireADC Website logo" src="/sites/www.empireadc.org/files/ead_logo.gif"></a>
+          <a href="/" title="Home"><img style="height:auto;width:348px;" alt="EmpireADC Website logo" src="/sites/www.empireadc.org/files/ead_logo.gif"></a>
         </div>
       
       <h1 id="site-title">
@@ -68,8 +68,9 @@ function myFunction() {
   overflow: hidden;
   background-color: #333;
   float: left;
-  margin-left: 52px;
+  margin-left: 118px;
 }
+
 
 .topnav a {
   float: left;
@@ -79,6 +80,10 @@ function myFunction() {
   padding: 14px 15px;
   text-decoration: none;
   font-size: 17px;
+  font-weight:bold;
+}
+.fa{
+padding-top:10px;
 }
 .fa-bars:before{content:"\f0c9";}
 .topnav a:hover {
@@ -88,6 +93,7 @@ function myFunction() {
 
 .topnav a.active {
   color: white;
+background-color: #333;  /*zack added 070721 */
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -103,14 +109,15 @@ function myFunction() {
 }
 /* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+  font-size: 17px !important;
+  border: none !important;
+  outline: none !important;
+  color: white !important;
+  padding: 0px 0px !important;
+  background-color: inherit !important;
+  font-family: inherit !important;
+  margin: 0 !important;
+/*  margin-top: 15px !important;  zack 20210702 */
 }
 
 /* Style the dropdown content (hidden by default) */
@@ -119,7 +126,7 @@ function myFunction() {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 10;
   position: fixed;
 }
 
@@ -162,10 +169,32 @@ d close the topnav (.icon) */
   }
 }
 
+@media screen and (max-width: 1000px) {
+
+img,
+video {
+  max-width:72%;
+  height:auto;
+}
+.topnav{
+margin-left:-87px !important;
+}
+.EAD_Home_Search_Box{
+margin-top:-20%;
+}
+
+}
+
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on 
 sm
 all screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {.topnav{
+margin-left:42px !important;
+}
+
+
+
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -174,21 +203,35 @@ all screens (display the links vertically instead of horizontally) */
   }
   .topnav.responsive a {
     float: none;
-    display: block;
+    display: inline-block !important;
     text-align: left;
   }
   .topnav.responsive .dropdown {float: none;}
   .topnav.responsive .dropdown-content {position: relative;}
   .topnav.responsive .dropdown .dropbtn {
-    display: block;
+    display: inline-flex !important;
     width: 100%;
     text-align: left;
+padding-top:20px;
+width:228px important;
   }
 } 
 
 
+/* of top nav senylrc */
+@media screen and (max-width: 640px) {
+#site-description{
+display:none;
+}
+.content{
+padding-top:35px;
+}
+.EAD_Home_Search_Box{
+margin-top:-25%;
 
 }
+}
+
 </style>
 
 
@@ -206,19 +249,44 @@ all screens (display the links vertically instead of horizontally) */
 -->
 
 <div class="topnav" id="myTopnav">
-  <a href="/" class="active">Home</a>
 <div class="dropdown">
-    <button class="dropbtn">Browse
+  <button  class="dropbtn"><a href="/" >Home</a></button>
+</div>
+<div class="dropdown">
+    <button class="dropbtn"> <a href="#">Search & Browse</a>
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
       <a href="/search/repositories">Repositories</a>
-      <a href="/search/collections">Collections</a>
+      <a href="/search/collections">Finding Aids</a>
     </div>
   </div>
-  <a href="/search">Search</a>
-  <a href="/participate">Participate</a>
-<a href="/about">About</a>
+
+
+<div class="dropdown">
+    <button class="dropbtn"><a href="#">Participate</a>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+<a href="/participate">Participate in EmpireADC</a>
+      <a href="/application">Application to Join</a>
+      <a href="/faq">Participation FAQ</a>
+	<a href="/fees">Participation Fees</a>
+    </div>
+  </div>
+
+<div class="dropdown">
+    <button class="dropbtn"> <a href="#">About</a>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+<a href="/about">About EmpireADC</a>
+      <a href="/projecthistory">Project History</a>
+      <a href="/standards">Standards & Technology</a>
+        <a href="/leadership">Leadership</a>
+    </div>
+  </div>
+
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>

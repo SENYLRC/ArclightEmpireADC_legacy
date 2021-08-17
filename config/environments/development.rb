@@ -6,7 +6,11 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-config.hosts << /[a-z0-9]+\.senylrc\.org/
+#config.hosts << /[a-z0-9]+\.senylrc\.org/
+#config.hosts << /[a-z0-9]+\.empireadc\.org/;
+config.hosts << '.empireadc.org'
+#  config.hosts.clear
+
 config.assets.prefix = '/search2'
 
 config.relative_url_root = '/'
@@ -63,5 +67,7 @@ config.relative_url_root = '/'
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+#  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+config.file_watcher = ActiveSupport::FileUpdateChecker
+
 end

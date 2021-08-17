@@ -4,7 +4,8 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-config.hosts << /[a-z0-9]+\.senylrc\.org/
+#config.hosts << /[a-z0-9]+\.senylrc\.org/
+config.hosts << /[a-z0-9]+\.empireadc\.org/
 config.assets.prefix = '/search'
 
 
