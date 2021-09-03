@@ -16,6 +16,7 @@
  *
  * Used by blacklight_range_limit
  *= require  'blacklight_range_limit'
+ *= require font-awesome
  *
 */
 /* for ada */
@@ -629,3 +630,14 @@ padding-top:35px;
 
 
 
+.inventory-button .fa-file-excel-o {
+  color: #1D6F42;
+}
+
+.inventory-button .fa-file-pdf-o {
+  color: crimson;
+}
+
+.inventory-button .fa {
+  padding-top: 0;
+}
