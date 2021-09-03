@@ -572,3 +572,6 @@ padding-top:35px;
 
 
 
+.inventory-icon {
+    width: 3rem;
+}
