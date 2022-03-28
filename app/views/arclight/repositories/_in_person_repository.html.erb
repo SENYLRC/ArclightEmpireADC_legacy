@@ -15,5 +15,10 @@
         </div>
       <% end %>
     <% end %>
+<% if repository.url.present? %>
+          <div class='al-repository-contact-info-url'>
+            <%= link_to("Link to repository site", repository.url) %>
+          </div>
+        <% end %>
   </address>
 </div>
