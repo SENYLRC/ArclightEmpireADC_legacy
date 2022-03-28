@@ -8,12 +8,16 @@ module Arclight
     include ActionView::Helpers::OutputSafetyHelper
 
     def render_html_tags(args)
-      values = args[:value] || []
-      values.map! do |value|
-        transform_ead_to_html(value)
+      if args.is_a? String
+	transform_ead_to_html(args)
+      else	
+        values = args[:value] || []
+        values.map! do |value|
+          transform_ead_to_html(value)
+        end
+        values.map! { |value| wrap_in_paragraph(value) } if values.count > 1
+        safe_join(values.map(&:html_safe))
       end
-      values.map! { |value| wrap_in_paragraph(value) } if values.count > 1
-      safe_join(values.map(&:html_safe))
     end
 
     private
