@@ -13,7 +13,7 @@
           <% otherfindaids = document._source["otherfindaid_ssm"] %>
           <dd class="blacklight-<%= field_name.parameterize %> col-md-9">
             <% otherfindaids.each do |otherfindaid| %>
-              <% if otherfindaid.starts_with?("<p>https://") %>
+              <% if otherfindaid.starts_with?("<ESLNDOC>") %>
 		<% otherfindaid=ActionView::Base.full_sanitizer.sanitize(otherfindaid, :tags => %w(img br p), :attributes => %w(src style)) %>
                 <a href="<%= otherfindaid %>" class="btn btn-outline-info inventory-button">
                 <% if otherfindaid.downcase.ends_with?(".pdf") %>
