@@ -271,11 +271,12 @@ class CatalogController < ApplicationController
     config.add_background_field 'custodhist_ssm', label: 'Custodial history', helper_method: :render_html_tags
     config.add_background_field 'processinfo_ssm', label: 'Processing information', helper_method: :render_html_tags
     config.add_background_field 'arrangement_ssm', label: 'Arrangement', helper_method: :render_html_tags
+config.add_background_field 'did_note_ssm', label: 'General Note', helper_method: :render_html_tags
     config.add_background_field 'accruals_ssm', label: 'Accruals', helper_method: :render_html_tags
     config.add_background_field 'phystech_ssm', label: 'Physical / technical requirements', helper_method: :render_html_tags
     config.add_background_field 'physloc_ssm', label: 'Physical location', helper_method: :render_html_tags
     config.add_background_field 'descrules_ssm', label: 'Rules or conventions', helper_method: :render_html_tags
-
+   
     # Collection Show Page - Related Section
     config.add_related_field 'relatedmaterial_ssm', label: 'Related material', helper_method: :render_html_tags
     config.add_related_field 'separatedmaterial_ssm', label: 'Separated material', helper_method: :render_html_tags
@@ -328,6 +329,7 @@ class CatalogController < ApplicationController
     config.add_component_field 'acqinfo_ssim', label: 'Acquisition information', helper_method: :render_html_tags
     config.add_component_field 'appraisal_ssm', label: 'Appraisal information', helper_method: :render_html_tags
     config.add_component_field 'custodhist_ssm', label: 'Custodial history', helper_method: :render_html_tags
+    config.add_component_field 'did_note_ssm', label: 'General Note', helper_method: :render_html_tags
     config.add_component_field 'processinfo_ssm', label: 'Processing information', helper_method: :render_html_tags
     config.add_component_field 'arrangement_ssm', label: 'Arrangement', helper_method: :render_html_tags
     config.add_component_field 'accruals_ssm', label: 'Accruals', helper_method: :render_html_tags
